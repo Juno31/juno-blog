@@ -41,12 +41,14 @@ function Home() {
 
       setDelta(e.deltaY);
     }
-
+    
     window.addEventListener('wheel', zoomEvent);
+
 
     return function(){
 
       window.removeEventListener('wheel', zoomEvent);
+
     }
   },[])
 
@@ -78,6 +80,40 @@ function Home() {
     }
 
   }, [delta])
+
+  let touchY = 0;
+  let touchYEnd = 0;
+
+  useEffect(function(){
+
+    window.addEventListener('touchstart', function(e){
+
+      touchY = e.touches[0].clientY;
+      console.log(touchY);
+    })
+
+    window.addEventListener('touchend', function(e){
+
+      touchYEnd = e.changedTouches[0].clientY;
+      
+      
+      if(touchY > touchYEnd){
+        
+        setImgScale(2.1);
+        setFirstOpacity(0);
+        setFirstZ(-1);
+        setSecondOpacity(1);
+
+      } else if(touchY <= touchYEnd){
+        
+        setImgScale(1.2);
+        setFirstOpacity(1);
+        setFirstZ(1);
+        setSecondOpacity(0);
+      }
+    })
+
+  }, [touchY, touchYEnd])
 
   return (
     <LandingContainer>
