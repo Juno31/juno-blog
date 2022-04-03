@@ -71,7 +71,7 @@ export const BackgroundImg = styled.img`
 
   transition: ease 0.8s; 
 
-  transform: translateZ(1.5px);
+  transform: scale(1.2);
   transform-style: preserve-3d;
   animation-name: zoomIn;
   animation-direction: alternate;
@@ -80,10 +80,10 @@ export const BackgroundImg = styled.img`
 
   @keyframes zoomIn{
     from{
-      transform: translateZ(2.5px);
+      transform: scale(1.5);
     }
     to{
-      transform: translateZ(1.5px);
+      transform: scale(1.2);
     }
   }
 `

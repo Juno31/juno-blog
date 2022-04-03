@@ -99,14 +99,15 @@ function Home() {
           </Title2>
         </TitleWrapper>
       </FirstPageWrapper>
-
+      
+      {/* page after scroll */}
       <SecondPageWrapper secondOpacity={secondOpacity}>
         <ContentWrapper>
           <Iam>I am Juno.</Iam>
-          <Frontend onClick={function () { navigate('portfolio/?type=Frontend') }}>Front-end <ForestText>Developer</ForestText></Frontend>
-          <Awaker  onClick={function () { navigate('portfolio/?type=Awaker') }}><ForestText>Awaker</ForestText> at AwakeCorp</Awaker>
-          <Hanyang  onClick={function () { navigate('portfolio/?type=Hanyang') }}>Hanyang Univ. <ForestText>Student</ForestText></Hanyang>
-          <Member  onClick={function () { navigate('portfolio/?type=ForestAsset') }}><ForestText>Member</ForestText> of Forest Asset</Member>
+          <Frontend onClick={function () { navigate('post/?type=Frontend') }}>Front-end <ForestText>Developer</ForestText></Frontend>
+          <Awaker  onClick={function () { navigate('post/?type=Awaker') }}><ForestText>Awaker</ForestText> at AwakeCorp</Awaker>
+          <Hanyang  onClick={function () { navigate('post/?type=Hanyang') }}>Hanyang Univ. <ForestText>Student</ForestText></Hanyang>
+          <Member  onClick={function () { navigate('post/?type=ForestAsset') }}><ForestText>Member</ForestText> of Forest Asset</Member>
         </ContentWrapper>
       </SecondPageWrapper>
     </LandingContainer>

@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 
 // Components
 import Home from './LandingPage/index';
-import Portfolio from './Portfolio';
+import Post from './Post';
 
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
     <>
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/portfolio/*' element={<Portfolio />} />
+        <Route path='/post/*' element={<Post />} />
       </Routes>
     </>
   );

@@ -14,20 +14,26 @@ const Globalstyles = createGlobalStyle`
 html{
   height: 100vh;
   width: 100vw;
-  // overflow: hidden;
 }
 
 body{
   margin: 0px;
   width: 100vw;
-  height: 100vh;
+
+  background: #121212;
+
+  color: white;
+
+  box-sizing: border-box;
 }
 
 #root{
   height: 100vh;
   width: 100vw;
 
-  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 `
