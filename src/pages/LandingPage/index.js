@@ -97,20 +97,26 @@ function Home() {
       touchYEnd = e.changedTouches[0].clientY;
       
       
-      if(touchY > touchYEnd){
+      if(touchY > touchYEnd){ // 내리는 터치 모션
         
         setImgScale(2.1);
         setFirstOpacity(0);
         setFirstZ(-1);
         setSecondOpacity(1);
 
-      } else if(touchY <= touchYEnd){
-        
-        setImgScale(1.2);
-        setFirstOpacity(1);
-        setFirstZ(1);
-        setSecondOpacity(0);
+        this.window.removeEventListener('touchstart', function(e){
+
+          touchY = e.touches[0].clientY;
+          console.log(touchY);
+        })
       }
+      // } else if(touchY < touchYEnd){  // 내리는 터치 모션
+        
+      //   setImgScale(1.2);
+      //   setFirstOpacity(1);
+      //   setFirstZ(1);
+      //   setSecondOpacity(0);
+      // }
     })
 
   }, [touchY, touchYEnd])
