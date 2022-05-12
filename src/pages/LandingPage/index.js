@@ -35,7 +35,50 @@ function Home() {
   const [imgScale, setImgScale] = useState(1.2);
   const [imgBottom, setImgBottom] = useState(0);
 
+  const [name, setName] = useState('주노');
+
   const [delta, setDelta] = useState(0);
+
+  const changeWord = function(array, setState){
+
+    for(let ii = 0; ii < array[0].length; ii ++){
+      
+      let charArray = array[0].split('');
+      let result = ''
+
+      for(let aa = 0; aa <= ii; aa++){
+        result = result + charArray[aa];
+      }
+      setTimeout(function(){
+        
+        setName(result)
+      }, (3000 + (ii * 500)))
+    }
+  }
+
+  useEffect(function(){
+
+    changeWord(['어웨이커'], setName)
+
+    // setTimeout(function(){
+    //   setName('주')
+    // }, 3000)
+    // setTimeout(function(){
+    //   setName('')
+    // }, 3500)
+    // setTimeout(function(){
+    //   setName('어')
+    // }, 5000)
+    // setTimeout(function(){
+    //   setName('어웨')
+    // }, 5600)
+    // setTimeout(function(){
+    //   setName('어웨이')
+    // }, 5900)
+    // setTimeout(function(){
+    //   setName('어웨이커')
+    // }, 6500)
+  }, [])
 
   useEffect(function(){
     const zoomEvent = function(e) {
@@ -156,7 +199,7 @@ function Home() {
         <TitleWrapper>
           <Title1>안녕하세요</Title1>
           <Title2>
-            <Underline>주노</Underline>입니다.
+            <Underline>{name}</Underline>입니다.
           </Title2>
         </TitleWrapper>
       </FirstPageWrapper>

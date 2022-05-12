@@ -263,7 +263,7 @@ function Index() {
             user: {
               id: 1,
               name: 'Juno',
-              profile: 'http://localhost:3000/assets/rainForest.jpeg'
+              profile: 'http://junoforest.com/assets/rainForest.jpeg'
             }
           },
           {
@@ -275,7 +275,7 @@ function Index() {
             user: {
               id: 1,
               name: 'Juno',
-              profile: 'http://localhost:3000/assets/rainForest.jpeg'
+              profile: 'http://junoforest.com/assets/rainForest.jpeg'
             }
           },
           {
@@ -287,7 +287,7 @@ function Index() {
             user: {
               id: 1,
               name: 'Juno',
-              profile: 'http://localhost:3000/assets/rainForest.jpeg'
+              profile: 'http://junoforest.com/assets/rainForest.jpeg'
             }
           },
           {
@@ -299,7 +299,7 @@ function Index() {
             user: {
               id: 1,
               name: 'Juno',
-              profile: 'http://localhost:3000/assets/rainForest.jpeg'
+              profile: 'http://junoforest.com/assets/rainForest.jpeg'
             }
           }
           ].map(function(item){

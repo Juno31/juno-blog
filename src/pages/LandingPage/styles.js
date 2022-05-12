@@ -142,6 +142,7 @@ export const Title2 = styled.h2`
   position: absolute;
 
   width: max-content;
+  height: max-content;
 
   z-index: 2;
 
