@@ -1,3 +1,3 @@
 ## Objectives
 
-practice javascript, css learns and record them
+practice & recored javascript, css learns
